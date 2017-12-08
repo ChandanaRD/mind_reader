@@ -1,0 +1,101 @@
+<!DOCtype html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="images/6ef1b7da-0b7b-40c3-aeac-e375ec111e72.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-light_blue.min.css" /> <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+                <title>card 3</title>
+    </head>
+    
+       <body style='background-color: white; color:darkslategrey' align='center'>
+        
+        <h1 style="color:cadetblue"> CARD 6 </h1>
+        
+        
+        <script type="text/javascript">
+            
+        //*************************************************
+             var card6=[
+                        [1,3,5,7],
+                        [9,11,13,15],
+                        [17,19,21,23],
+                        [25,27,29,31],
+                        [33,35,37,39],
+                        [41,43,45,47],
+                        [49,51,53,55],
+                        [57,59,61,63]
+                   ] //array of card6 values
+        //**************************************************
+             
+        function val()
+            {
+               
+                var num=document.cookie.indexOf('=');
+                var num1=document.cookie.indexOf(';');
+                var v= document.cookie.substring(num+1,num1);
+                v=Number(v)+card6[0][0];
+                document.cookie="magicvalue="+v;
+                 var btn=document.getElementById('card6no');
+                btn.disabled=true;
+                var btn=document.getElementById('card6yes');
+                btn.disabled=true;
+                var btn=document.getElementById('card6');
+                btn.disabled=false;
+
+            }
+        function val1()
+            {
+                var btn=document.getElementById('card6no');
+                btn.disabled=true;
+                var btn=document.getElementById('card6yes');
+                btn.disabled=true;
+                var btn=document.getElementById('card6');
+                btn.disabled=false;
+            }
+            
+        
+            document.write("<table border='8' align='center' width='200' height='300'");
+            
+            //display values of card2
+            
+            for(var i=0;i<8;i++){
+                document.write("<tr align='center'>");
+                
+                for(var j=0;j<4;j++){
+                    document.write("<td>"+card6[i][j]+"</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+            
+        </script>
+  
+            <h4>
+                Is your number present in this card?
+            </h4>
+            <br>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="val()" id="card6yes">
+            yes
+            </button>
+        
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="val1()" id="card6no">
+            no
+            </button><br><br>
+            
+             <a href="final.html">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled id="card6">
+            next
+            </button></a>
+
+    </body>
+</html>
