@@ -23,12 +23,12 @@
         <script type="text/javascript">
             function disp()
             {
-                var num=document.cookie.indexOf('=');
-                var num1=document.cookie.indexOf(';');
-                var v= document.cookie.substring(num+1,num1);
+                var p=document.cookie;
+                var p=p.split('=');
+    v=p[1].split(';');
+                v=Number(v);
                 document.write("<h1 style='color':brown'><i>"+v+"</i></h1><br>");
                 document.cookie="magicvalue="+0;
-
             }
         </script>
         

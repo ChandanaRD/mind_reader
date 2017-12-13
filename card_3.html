@@ -40,12 +40,13 @@
                function val()
             {
                
-                var num=document.cookie.indexOf('=');
-                var num1=document.cookie.indexOf(';');
-                var v= document.cookie.substring(num+1,num1);
-                v=Number(v)+card3[0][0];
+              var p=document.cookie;
+                var p=p.split('=');
+    v=p[1].split(';');
+                v=Number(v);
+                v=v+card3[0][0];
                 document.cookie="magicvalue="+v;
-                 var btn=document.getElementById('card3no');
+                var btn=document.getElementById('card3no');
                 btn.disabled=true;
                 var btn=document.getElementById('card3yes');
                 btn.disabled=true;

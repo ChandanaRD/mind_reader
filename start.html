@@ -22,9 +22,21 @@
     <body style="background-color:white" align='center'>
           <script type="text/javascript">
               <br><br><br>
+                  
         document.cookie="magicvalue="+0;
+              
+                v=document.cookie;
+                v=v.charCodeAt(11);
+                v=v+card2[0][0];
+                document.cookie="magicvalue="+v;
+                document.write(v);
+              
     </script>
-       <img src="magic_mickey.jpg" alt="welcome" width='400' height='400'/>
+       
+        
+        
+        
+        <img src="magic_mickey.jpg" alt="welcome" width='400' height='400'/>
             <br>
         <p>
             <h4 style='color:darkgrey'>
@@ -34,12 +46,13 @@
                 If not click no.<br>
                 Lets start!<br>
             </h4>
-        
+            <script> disp();   </script>
             <a href="card_1.html">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="disp()">
             start!
             </button></a>
-
+            
+            
         
     </body>
   

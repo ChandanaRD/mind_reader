@@ -37,13 +37,13 @@
         //*******************************************************
         function val()
             {
-               
-                var num=document.cookie.indexOf('=');
-                var num1=document.cookie.indexOf(';');
-                var v= document.cookie.substring(num+1,num1);
-                v=Number(v)+card2[0][0];
+               var p=document.cookie;
+                var p=p.split('=');
+    v=p[1].split(';');
+                v=Number(v);
+                v=v+card2[0][0];
                 document.cookie="magicvalue="+v;
-                 var btn=document.getElementById('card2no');
+                var btn=document.getElementById('card2no');
                 btn.disabled=true;
                 var btn=document.getElementById('card2yes');
                 btn.disabled=true;
